@@ -1,0 +1,15 @@
+{
+  "name": "clean-todo",
+  "private": true,
+  "packageManager": "pnpm@9.6.0",
+  "scripts": {
+    "dev": "pnpm -C packages/server dev & pnpm -C packages/web dev",
+    "build": "pnpm -C packages/server build && pnpm -C packages/web build",
+    "lint": "pnpm -C packages/server lint && pnpm -C packages/web lint",
+    "start": "pnpm -C packages/server start"
+  },
+  "devDependencies": {
+    "eslint": "^9.9.0",
+    "prettier": "^3.3.3"
+  }
+}
